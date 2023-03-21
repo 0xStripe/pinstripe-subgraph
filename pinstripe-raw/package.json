@@ -1,0 +1,16 @@
+{
+  "name": "pinstripe-raw",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --product hosted-service 0xstripe/pinstripe-raw --deploy-key $(cat .access_token)",
+    "create-local": "graph create --node http://localhost:8020/ 0xstripe/pinstripe-raw",
+    "remove-local": "graph remove --node http://localhost:8020/ 0xstripe/pinstripe-raw",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 0xstripe/pinstripe-raw"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.23.2",
+    "@graphprotocol/graph-ts": "0.23.1"
+  }
+}

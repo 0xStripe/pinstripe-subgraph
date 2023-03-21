@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: MarketFactory
+    network: fuji
+    source:
+      address: "0xDB8dfc04e6cFcCa54c95329fC1C0cF57a6A8bAA4"
+      abi: MarketFactory
+      startBlock: 19545928
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - MarketCreated
+      abis:
+        - name: MarketFactory
+          file: ./abis/MarketFactory.json
+      eventHandlers:
+        - event: MarketCreated(address,address,address,address)
+          handler: handleMarketCreated
+      file: ./src/market_factory.ts

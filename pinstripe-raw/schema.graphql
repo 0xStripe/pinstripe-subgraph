@@ -1,0 +1,30 @@
+"""
+Market contains index token, long token, short token addresses
+"""
+type Market @entity {
+  id: ID!
+  """
+  Market token address, it's also used as Market address
+  """
+  marketToken: String!
+  """
+  Index token address
+  """
+  indexToken: String!
+  """
+  Long token address
+  """
+  longToken: String!
+  """
+  Short token address
+  """
+  shortToken: String!
+  """
+  Created at blockNumber
+  """
+  blockNumber: Int!
+  """
+  Created at timestamp
+  """
+  timestamp: Int!
+}
