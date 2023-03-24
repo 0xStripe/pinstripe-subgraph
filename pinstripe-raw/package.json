@@ -1,16 +1,19 @@
 {
   "name": "pinstripe-raw",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
+    "build:arbitrum-goerli": "graph build --network arbitrum-goerli",
     "deploy": "graph deploy --product hosted-service 0xstripe/pinstripe-raw --deploy-key $(cat .access_token)",
+    "deploy:arbitrum-goerli": "graph deploy --product hosted-service 0xstripe/pinstripe-raw-arbitrum-goerli --deploy-key $(cat .access_token)",
     "create-local": "graph create --node http://localhost:8020/ 0xstripe/pinstripe-raw",
-    "remove-local": "graph remove --node http://localhost:8020/ 0xstripe/pinstripe-raw",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 0xstripe/pinstripe-raw"
+    "remove-local": "graph remove --network localhost --node http://localhost:8020/ 0xstripe/pinstripe-raw",
+    "deploy-local": "graph deploy --network localhost --node http://localhost:8020/ --ipfs http://localhost:5001 0xstripe/pinstripe-raw",
+    "all-local": "graph build --network localhost && yarn create-local && yarn deploy-local"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.23.2",
-    "@graphprotocol/graph-ts": "0.23.1"
+    "@graphprotocol/graph-cli": "^0.43.0",
+    "@graphprotocol/graph-ts": "^0.29.3"
   }
 }

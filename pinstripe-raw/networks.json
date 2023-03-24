@@ -1,8 +1,19 @@
 {
+  "arbitrum-goerli": {
+    "MarketFactory": {
+      "address": "0x1DBbd042805F40c0Bb720e38681e59b9b7925Db1",
+      "startBlock": 13055603
+    }
+  },
   "fuji": {
     "MarketFactory": {
       "address": "0xDB8dfc04e6cFcCa54c95329fC1C0cF57a6A8bAA4",
       "startBlock": 19545928
+    }
+  },
+  "localhost": {
+    "MarketFactory": {
+      "address": "0x51A1ceB83B83F1985a81C295d1fF28Afef186E02"
     }
   }
 }

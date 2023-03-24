@@ -1,17 +1,17 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: MarketFactory
-    network: fuji
+    network: arbitrum-goerli
     source:
-      address: "0xDB8dfc04e6cFcCa54c95329fC1C0cF57a6A8bAA4"
       abi: MarketFactory
-      startBlock: 19545928
+      address: "0x1DBbd042805F40c0Bb720e38681e59b9b7925Db1"
+      startBlock: 13055603
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - MarketCreated
