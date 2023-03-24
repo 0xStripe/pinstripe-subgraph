@@ -4,13 +4,15 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "build:arbitrum-goerli": "graph build --network arbitrum-goerli",
+    "build:localhost": "graph build --network localhost -o builds/localhost/",
+    "build:arbitrum-goerli": "graph build --network arbitrum-goerli -o builds/arbitrum-goerli",
     "deploy": "graph deploy --product hosted-service 0xstripe/pinstripe-raw --deploy-key $(cat .access_token)",
-    "deploy:arbitrum-goerli": "graph deploy --product hosted-service 0xstripe/pinstripe-raw-arbitrum-goerli --deploy-key $(cat .access_token)",
-    "create-local": "graph create --node http://localhost:8020/ 0xstripe/pinstripe-raw",
-    "remove-local": "graph remove --network localhost --node http://localhost:8020/ 0xstripe/pinstripe-raw",
-    "deploy-local": "graph deploy --network localhost --node http://localhost:8020/ --ipfs http://localhost:5001 0xstripe/pinstripe-raw",
-    "all-local": "graph build --network localhost && yarn create-local && yarn deploy-local"
+    "deploy:arbitrum-goerli": "graph deploy --product hosted-service -o builds/arbitrum-goerli 0xstripe/pinstripe-raw-arbitrum-goerli --deploy-key $(cat .access_token)",
+    "all:arbitrum-goerli": "yarn build:arbitrum-goerli && yarn deploy:arbitrum-goerli",
+    "create:localhost": "graph create --node http://localhost:8020/ 0xstripe/pinstripe-raw",
+    "remove:localhost": "graph remove --network localhost --node http://localhost:8020/ 0xstripe/pinstripe-raw",
+    "deploy:localhost": "graph deploy --network localhost --node http://localhost:8020/ --ipfs http://localhost:5001 -o builds/localhost --version-label v0.0.1 0xstripe/pinstripe-raw",
+    "all:localhost": "yarn build:localhost && yarn create:localhost && yarn deploy:localhost"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.43.0",

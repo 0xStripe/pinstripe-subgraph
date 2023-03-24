@@ -1,0 +1,11 @@
+query {
+  markets {
+    id
+    indexToken
+    marketToken
+    longToken
+    shortToken
+    blockNumber
+    timestamp
+  }
+}
