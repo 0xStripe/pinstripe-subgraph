@@ -3,6 +3,7 @@
   "license": "MIT",
   "scripts": {
     "codegen": "graph codegen",
+    "test": "graph test pinstripe-raw -v 0.5.4",
     "build": "graph build",
     "build:localhost": "graph build --network localhost -o builds/localhost/",
     "build:arbitrum-goerli": "graph build --network arbitrum-goerli -o builds/arbitrum-goerli",
@@ -17,5 +18,10 @@
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.43.0",
     "@graphprotocol/graph-ts": "^0.29.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/faker": "^6.6.9",
+    "matchstick-as": "^0.5.2"
   }
 }

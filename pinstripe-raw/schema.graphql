@@ -1,30 +1,71 @@
-"""
-Market contains index token, long token, short token addresses
-"""
+# Market contains index token, long token, short token addresses
 type Market @entity {
   id: ID!
-  """
-  Market token address, it's also used as Market address
-  """
+  # Market token address, it's also used as Market address
   marketToken: String!
-  """
-  Index token address
-  """
+  # Index token address
   indexToken: String!
-  """
-  Long token address
-  """
+  # Long token address
   longToken: String!
-  """
-  Short token address
-  """
+  # Short token address
   shortToken: String!
-  """
-  Created at blockNumber
-  """
+  # Created at blockNumber
   blockNumber: Int!
-  """
-  Created at timestamp
-  """
+  # Created at timestamp
   timestamp: Int!
+}
+
+# Represent a transaction
+type Transaction @entity {
+  id: ID!
+  transactionHash: String!
+  transactionIndex: Int!
+  logIndex: Int!
+  blockNumber: Int!
+  timestamp: Int!
+  from: String!
+  to: String!
+}
+
+# Store CreateDeposit request from user
+type CreateDeposit @entity {
+  # Use create deposit request key as ID 
+  id: ID!
+
+  from: String!
+  receiver: String!
+  callbackContract: String!
+  market: String!
+  initialLongToken: String!
+  initialShortToken: String!
+  longTokenSwapPath: [String!]!
+  shortTokenSwapPath: [String!]!
+  initialLongTokenAmount: BigInt!
+  initialShortTokenAmount: BigInt!
+  minMarketTokens: BigInt!
+  updatedAtBlocks: Int!
+  executionFee: BigInt!
+  callbackGasLimit: BigInt!
+  shouldUnwrapNativeToken: Boolean!
+
+  transaction: Transaction!
+}
+
+# Store CancelDeposit tx
+type CancelDeposit @entity {
+  id: ID!
+  reason: String!
+  reasonBytes: Bytes!
+
+  transaction: Transaction!
+}
+
+# Store ExecuteDeposit tx
+type ExecuteDeposit @entity {
+  id: ID!
+  longTokenAmount: BigInt!
+  shortTokenAmount: BigInt!
+  receivedMarketTokens: BigInt!
+
+  transaction: Transaction!
 }

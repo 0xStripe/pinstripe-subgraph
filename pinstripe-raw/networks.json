@@ -1,8 +1,228 @@
 {
   "arbitrum-goerli": {
+    "AdlHandler": {
+      "address": "0x73705c028c33130CC3992Bbb5098f1AF85636FAB",
+      "startBlock": 13055590
+    },
+    "AdlUtils": {
+      "address": "0xdb58431B773D3be9d9b3791e7Ef0f4a4C553Da69",
+      "startBlock": 13052640
+    },
+    "BaseOrderUtils": {
+      "address": "0x666261832f997d5E4e806D84B51D0C3d445EBc11",
+      "startBlock": 13052349
+    },
+    "Config": {
+      "address": "0xB1C329d0B6a67F0cf4F632DAc65CE2Be9d4594Aa",
+      "startBlock": 13057919
+    },
+    "DataStore": {
+      "address": "0x64CfbE984FF192C224cCe6DB55d66F73e677E92e",
+      "startBlock": 13052655
+    },
+    "DecreaseOrderUtils": {
+      "address": "0x52E33B5Be218081D474aac37102F2168b7Ce602A",
+      "startBlock": 13052598
+    },
+    "DecreasePositionCollateralUtils": {
+      "address": "0xc9e183389233828A8ADb7B3af5A8EC3e9F5FbE06",
+      "startBlock": 13052568
+    },
+    "DecreasePositionUtils": {
+      "address": "0x2f19f38277b87f9424CeBF1FEf0B3A2511BbC000",
+      "startBlock": 13052581
+    },
+    "DepositEventUtils": {
+      "address": "0x3E51961C40695Ff5c08f933c021bc58E7fB23070",
+      "startBlock": 13057954
+    },
+    "DepositHandler": {
+      "address": "0xC0663FFC9c2C72a1c1043952A332695209921De6",
+      "startBlock": 13058051
+    },
+    "DepositStoreUtils": {
+      "address": "0x1bCA141df1aDf2a84B27F9AC9Da2a9592c078138",
+      "startBlock": 13057988
+    },
+    "DepositUtils": {
+      "address": "0x49a08dDae79ADec7a95CCE38ec072B0653871D54",
+      "startBlock": 13058005
+    },
+    "DepositVault": {
+      "address": "0x6510a8E9e2DF1F53dc919b846c671b24c3572C13",
+      "startBlock": 13057972
+    },
+    "EventEmitter": {
+      "address": "0x5E634F035779cd5BCfb79B8933650754d8A5ed06",
+      "startBlock": 13055494
+    },
+    "ExchangeRouter": {
+      "address": "0xDf291A95e83942A6586B888e49897085A41B792b",
+      "startBlock": 13058213
+    },
+    "ExecuteDepositUtils": {
+      "address": "0xB11069613F78C1FB4c26B452e174782f006aa75A",
+      "startBlock": 13058032
+    },
+    "FeeUtils": {
+      "address": "0xCD70eD1787Cf696Cda9A61CAB31AAe6131207397",
+      "startBlock": 13052407
+    },
+    "GasUtils": {
+      "address": "0xaD26dbbe979f90A0183D04B5F03E23d213e2D604",
+      "startBlock": 13052336
+    },
+    "IncreaseOrderUtils": {
+      "address": "0xec97888fA2d454e325544D116D1BA7991131b2F3",
+      "startBlock": 13052554
+    },
+    "IncreasePositionUtils": {
+      "address": "0x4e97015c0cD3Ac005bD9f5c5fC1DD9caCA2aD9bE",
+      "startBlock": 13052542
+    },
+    "LiquidationHandler": {
+      "address": "0x838e8383268438193F178b533AA3037610Cc02b9",
+      "startBlock": 13058287
+    },
+    "LiquidationUtils": {
+      "address": "0xeC6EdA2577fb121f08350e5c7217bD889975eFEc",
+      "startBlock": 13058256
+    },
+    "MarketEventUtils": {
+      "address": "0x6B7eeA1c4Fa6433898E09ec0236B2AC15e8684c4",
+      "startBlock": 13052421
+    },
     "MarketFactory": {
       "address": "0x1DBbd042805F40c0Bb720e38681e59b9b7925Db1",
       "startBlock": 13055603
+    },
+    "MarketStoreUtils": {
+      "address": "0x3BdB06f0675A41B6a24741A935Eb127A392506c1",
+      "startBlock": 13052367
+    },
+    "MarketUtils": {
+      "address": "0x261aAf7925493e54dDfcAD1909258ca081C9214a",
+      "startBlock": 13052472
+    },
+    "Multicall3": {
+      "address": "0x05B0bce139E5F440dbF34d405E7AEC3C33Ec2d7A",
+      "startBlock": 13058323
+    },
+    "Oracle": {
+      "address": "0x9626902D450566EAa94973108EfadAC3DA67f7Dc",
+      "startBlock": 13055517
+    },
+    "OracleStore": {
+      "address": "0x40bd340dd32b1d958855c3f66145690876977866",
+      "startBlock": 13052928
+    },
+    "OrderEventUtils": {
+      "address": "0xc6E133Eb6EB7289d7b0170228Ff99CbAB3E05293",
+      "startBlock": 13052391
+    },
+    "OrderHandler": {
+      "address": "0x57B18c8D556B93DdfAbf915ccc98B232EC2f4a16",
+      "startBlock": 13058176
+    },
+    "OrderStoreUtils": {
+      "address": "0x3b1C743fAf72ac2729598Fffa41966c29379Fa7E",
+      "startBlock": 13052380
+    },
+    "OrderUtils": {
+      "address": "0xA828141D85Cd199aaE1d681FB8c46fa5602BAe2E",
+      "startBlock": 13052630
+    },
+    "OrderVault": {
+      "address": "0xD61556eCD10067d22B26Ec718702691f030406FD",
+      "startBlock": 13055510
+    },
+    "PositionEventUtils": {
+      "address": "0x5868f8EA6F2ebFc6C65A8645750894D1196ED5bF",
+      "startBlock": 13052494
+    },
+    "PositionPricingUtils": {
+      "address": "0x61ec58c9870D5cB4586e13B041eF0076E6F0c1a9",
+      "startBlock": 13052525
+    },
+    "PositionStoreUtils": {
+      "address": "0x4beB1E056adFbCfaF2696E2995E2197099e07aC3",
+      "startBlock": 13052456
+    },
+    "PositionUtils": {
+      "address": "0xdeD3B5c8D1735204448e88644eEFC13294f6d7AA",
+      "startBlock": 13052482
+    },
+    "Reader": {
+      "address": "0xD6F62068532D0DAFd7aA4ad721A187a64B07c838",
+      "startBlock": 13058356
+    },
+    "ReferralEventUtils": {
+      "address": "0x771fD5D66881b53256872653053C66D8B6D54330",
+      "startBlock": 13052513
+    },
+    "ReferralStorage": {
+      "address": "0x7043736A20FFb7fFE287ef0C83fb1056B497E12B",
+      "startBlock": 13055578
+    },
+    "RoleStore": {
+      "address": "0x1e79370e283f642048e816A08db48D2a976aF06E",
+      "startBlock": 13052266
+    },
+    "Router": {
+      "address": "0x6b1b5482781F48cD95Db8229C8b564372F31Cb75",
+      "startBlock": 13058082
+    },
+    "SwapHandler": {
+      "address": "0xdd231B63cbd4d7c1Ef07CDbfce337669c918a2fC",
+      "startBlock": 13055553
+    },
+    "SwapOrderUtils": {
+      "address": "0xEd17B29A65E7054A2e79dB1b187e8c616C7C4D43",
+      "startBlock": 13052616
+    },
+    "SwapUtils": {
+      "address": "0x07536CdeDF9a743c040feC0fC7bA371085460844",
+      "startBlock": 13052438
+    },
+    "Timelock": {
+      "address": "0x6aCCEE7F351e55D94d611854e36d2bD2F371C298",
+      "startBlock": 13058370
+    },
+    "USDC": {
+      "address": "0xFa2c1b0293b44FAC6182C3F48165Adb10164E103",
+      "startBlock": 13055113
+    },
+    "USDT": {
+      "address": "0x54F0dc065bCC8447991e4Fcdaa298C85e219FDA8",
+      "startBlock": 13055133
+    },
+    "WBTC": {
+      "address": "0xeED75f0a21d83a1E83FEE872b6e42c189f148d8a",
+      "startBlock": 13055152
+    },
+    "WETH": {
+      "address": "0xA1E213C0B226F09Ccd82121c2623b14778ae4A63",
+      "startBlock": 13055101
+    },
+    "WithdrawalEventUtils": {
+      "address": "0xC19b0f45AafA9759cDCea6b6a8e0C1bEC21d8500",
+      "startBlock": 13058122
+    },
+    "WithdrawalHandler": {
+      "address": "0x39b4800f0FFbAf679dbD733ac06EF74F4dC61805",
+      "startBlock": 13058154
+    },
+    "WithdrawalStoreUtils": {
+      "address": "0xCC58ae0284Fc499D86cbc9F19e5e2012ac9d6B53",
+      "startBlock": 13058109
+    },
+    "WithdrawalUtils": {
+      "address": "0xf65c2f99029F30B46b3E878315C7B0919867fb7a",
+      "startBlock": 13058139
+    },
+    "WithdrawalVault": {
+      "address": "0xaBe6F0a617741B371c2bC41D89d693D4d0398BC5",
+      "startBlock": 13058094
     }
   },
   "fuji": {
@@ -14,6 +234,9 @@
   "localhost": {
     "MarketFactory": {
       "address": "0x21dF544947ba3E8b3c32561399E88B52Dc8b2823"
+    },
+    "EventEmitter": {
+      "address": "0xFD471836031dc5108809D173A067e8486B9047A3"
     }
   }
 }
