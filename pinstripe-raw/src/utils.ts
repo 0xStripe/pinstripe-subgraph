@@ -1,6 +1,7 @@
 import { ethereum } from "@graphprotocol/graph-ts";
 import { Transaction } from "../generated/schema";
 
+// generate unique ID
 export function generateIdFromEvent(event: ethereum.Event): string {
   return event.transaction.hash.toHexString() + ":" + event.logIndex.toString();
 }
