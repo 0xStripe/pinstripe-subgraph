@@ -18,7 +18,7 @@ export function handleDepositCreated(eventData: EventData, transaction: Transact
   deposit.initialLongTokenAmount = eventData.getUintItem("initialLongTokenAmount")!;
   deposit.initialShortTokenAmount = eventData.getUintItem("initialShortTokenAmount")!;
   deposit.minMarketTokens = eventData.getUintItem("minMarketTokens")!;
-  deposit.updatedAtBlocks = eventData.getUintItem("updatedAtBlock")!;
+  deposit.updatedAtBlock = eventData.getUintItem("updatedAtBlock")!;
   deposit.executionFee = eventData.getUintItem("executionFee")!;
   deposit.callbackGasLimit = eventData.getUintItem("callbackGasLimit")!;
   deposit.shouldUnwrapNativeToken = eventData.getBoolItem("shouldUnwrapNativeToken");

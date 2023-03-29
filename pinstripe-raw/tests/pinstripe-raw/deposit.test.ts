@@ -1,8 +1,8 @@
 import { afterAll, clearStore, describe, test, beforeAll, assert, newTypedMockEvent, afterEach, logStore } from "matchstick-as/assembly/index";
 import { log } from "matchstick-as/assembly/log";
-import { EventLog1 } from "../../generated/EventEmitter/EventEmitter";
+import { EventLog1, EventLog } from "../../generated/EventEmitter/EventEmitter";
 import { Deposit } from "../../generated/schema";
-import { handleEventLog1 } from "../../src/event_emitter";
+import { handleEventLog1, handleEventLog } from "../../src/event_emitter";
 import { Bytes, ethereum, Address, BigInt } from "@graphprotocol/graph-ts";
 import { fakeEthereumAddress, ZERO_ADDRESS, EventLogData } from "./utils";
 import { DEPOSIT_ENTITY_TYPE, TRANSACTION_ENTITY_TYPE } from "./types";
@@ -150,40 +150,36 @@ function newDepositCreatedEvent(inputs: DepositCreatedEventParams): EventLog1 {
   return createDepositEvent;
 }
 
-function newDepositCancelledEvent(inputs: DepositCancelledEventParams): EventLog1 {
-  let event = newTypedMockEvent<EventLog1>();
+function newDepositCancelledEvent(inputs: DepositCancelledEventParams): EventLog {
+  let event = newTypedMockEvent<EventLog>();
   event.parameters = new Array();
 
   let msgSender = fakeEthereumAddress();
   let msgSenderParam = new ethereum.EventParam("msgSender", ethereum.Value.fromAddress(Address.fromString(msgSender)));
   let eventNameHashParam = new ethereum.EventParam("eventNameHash", ethereum.Value.fromBytes(Bytes.fromUTF8("DepositCancelled")));
   let eventNameParam = new ethereum.EventParam("eventName", ethereum.Value.fromString("DepositCancelled"));
-  let topic1Param = new ethereum.EventParam("topic1", ethereum.Value.fromBytes(Bytes.fromHexString(msgSender)));
   let eventDataParam = new ethereum.EventParam("eventData", newDepositCancelledEventData(inputs).toEthereumValue());
 
   event.parameters.push(msgSenderParam);
   event.parameters.push(eventNameHashParam);
   event.parameters.push(eventNameParam);
-  event.parameters.push(topic1Param);
   event.parameters.push(eventDataParam);
   return event;
 }
 
-function newDepositExecutedEvent(inputs: DepositExecutedEventParams): EventLog1 {
-  let event = newTypedMockEvent<EventLog1>();
+function newDepositExecutedEvent(inputs: DepositExecutedEventParams): EventLog {
+  let event = newTypedMockEvent<EventLog>();
   event.parameters = new Array();
 
   let msgSender = fakeEthereumAddress();
   let msgSenderParam = new ethereum.EventParam("msgSender", ethereum.Value.fromAddress(Address.fromString(msgSender)));
   let eventNameHashParam = new ethereum.EventParam("eventNameHash", ethereum.Value.fromBytes(Bytes.fromUTF8("DepositExecuted")));
   let eventNameParam = new ethereum.EventParam("eventName", ethereum.Value.fromString("DepositExecuted"));
-  let topic1Param = new ethereum.EventParam("topic1", ethereum.Value.fromBytes(Bytes.fromHexString(msgSender)));
   let eventDataParam = new ethereum.EventParam("eventData", newDepositExecutedEventData(inputs).toEthereumValue());
 
   event.parameters.push(msgSenderParam);
   event.parameters.push(eventNameHashParam);
   event.parameters.push(eventNameParam);
-  event.parameters.push(topic1Param);
   event.parameters.push(eventDataParam);
   return event;
 }
@@ -223,7 +219,7 @@ describe("handleDeposit", () => {
       assert.bigIntEquals(deposit!.initialLongTokenAmount, inputs.initialLongTokenAmount);
       assert.bigIntEquals(deposit!.initialShortTokenAmount, inputs.initialShortTokenAmount);
       assert.bigIntEquals(deposit!.minMarketTokens, inputs.minMarketTokens);
-      assert.bigIntEquals(deposit!.updatedAtBlocks, inputs.updatedAtBlock);
+      assert.bigIntEquals(deposit!.updatedAtBlock, inputs.updatedAtBlock);
       assert.bigIntEquals(deposit!.executionFee, inputs.executionFee);
       assert.bigIntEquals(deposit!.callbackGasLimit, inputs.callbackGasLimit);
       assert.booleanEquals(deposit!.shouldUnwrapNativeToken, inputs.shouldUnwrapNativeToken);
@@ -247,12 +243,12 @@ describe("handleDeposit", () => {
   });
 
 
-  describe("When receive a new EventLog1 event with event name DepositCancelled", () => {
+  describe("When receive a new EventLog event with event name DepositCancelled", () => {
     test("it should throw error if no Deposit is created", () => {
       let inputs = new DepositCancelledEventParams(Bytes.fromI32(1));
       let event = newDepositCancelledEvent(inputs);
 
-      handleEventLog1(event);
+      handleEventLog(event);
 
       assert.entityCount(DEPOSIT_ENTITY_TYPE, 0);
     }, true);
@@ -272,7 +268,7 @@ describe("handleDeposit", () => {
       let depositCancelledEvent = newDepositCancelledEvent(depositCancelledParams);
       depositCancelledEvent.logIndex = BigInt.fromString("2");
 
-      handleEventLog1(depositCancelledEvent);
+      handleEventLog(depositCancelledEvent);
       assert.entityCount(DEPOSIT_ENTITY_TYPE, 1);
       assert.entityCount(TRANSACTION_ENTITY_TYPE, 2);
 
@@ -285,12 +281,12 @@ describe("handleDeposit", () => {
     });
   });
 
-  describe("When receive a new EventLog1 event with event name DepositExecuted", () => {
+  describe("When receive a new EventLog event with event name DepositExecuted", () => {
     test("it should throw error if no Deposit is created", () => {
       let inputs = new DepositExecutedEventParams(Bytes.fromI32(1));
       let event = newDepositExecutedEvent(inputs);
 
-      handleEventLog1(event);
+      handleEventLog(event);
 
       assert.entityCount(DEPOSIT_ENTITY_TYPE, 0);
     }, true);
@@ -309,7 +305,7 @@ describe("handleDeposit", () => {
       let depositExecutedEvent = newDepositExecutedEvent(depositExecutedParams);
       depositExecutedEvent.logIndex = BigInt.fromString("2");
 
-      handleEventLog1(depositExecutedEvent);
+      handleEventLog(depositExecutedEvent);
       assert.entityCount(DEPOSIT_ENTITY_TYPE, 1);
       assert.entityCount(TRANSACTION_ENTITY_TYPE, 2);
 
