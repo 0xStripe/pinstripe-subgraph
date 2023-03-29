@@ -27,8 +27,14 @@ type Transaction @entity {
   to: String!
 }
 
-# Store CreateDeposit request from user
-type CreateDeposit @entity {
+enum OrderStatus {
+  Created
+  Executed
+  Cancelled
+  Frozen
+}
+
+type Deposit @entity {
   # Use create deposit request key as ID 
   id: ID!
 
@@ -43,29 +49,66 @@ type CreateDeposit @entity {
   initialLongTokenAmount: BigInt!
   initialShortTokenAmount: BigInt!
   minMarketTokens: BigInt!
-  updatedAtBlocks: Int!
+  updatedAtBlocks: BigInt!
   executionFee: BigInt!
   callbackGasLimit: BigInt!
   shouldUnwrapNativeToken: Boolean!
 
-  transaction: Transaction!
+  status: OrderStatus!
+
+  # execution params
+  executedLongTokenAmount: BigInt
+  executedShortTokenAmount: BigInt
+  receivedMarketTokens: BigInt
+
+  # cancellation params
+  cancelledReason: String
+  cancelledReasonBytes: Bytes
+
+  createdTxn: Transaction!
+  executedTxn: Transaction
+  cancelledTxn: Transaction
 }
 
-# Store CancelDeposit tx
-type CancelDeposit @entity {
-  id: ID!
-  reason: String!
-  reasonBytes: Bytes!
+# # Store CreateDeposit request from user
+# type CreateDeposit @entity {
+#   # Use create deposit request key as ID 
+#   id: ID!
 
-  transaction: Transaction!
-}
+#   from: String!
+#   receiver: String!
+#   callbackContract: String!
+#   market: String!
+#   initialLongToken: String!
+#   initialShortToken: String!
+#   longTokenSwapPath: [String!]!
+#   shortTokenSwapPath: [String!]!
+#   initialLongTokenAmount: BigInt!
+#   initialShortTokenAmount: BigInt!
+#   minMarketTokens: BigInt!
+#   updatedAtBlocks: Int!
+#   executionFee: BigInt!
+#   callbackGasLimit: BigInt!
+#   shouldUnwrapNativeToken: Boolean!
 
-# Store ExecuteDeposit tx
-type ExecuteDeposit @entity {
-  id: ID!
-  longTokenAmount: BigInt!
-  shortTokenAmount: BigInt!
-  receivedMarketTokens: BigInt!
+#   transaction: Transaction!
+# }
 
-  transaction: Transaction!
-}
+# # Store CancelDeposit tx
+# type CancelDeposit @entity {
+#   id: ID!
+#   reason: String!
+#   reasonBytes: Bytes!
+
+#   transaction: Transaction!
+# }
+
+# # Store ExecuteDeposit tx
+# type ExecuteDeposit @entity {
+#   id: ID!
+#   longTokenAmount: BigInt!
+#   shortTokenAmount: BigInt!
+#   receivedMarketTokens: BigInt!
+
+#   transaction: Transaction!
+# }

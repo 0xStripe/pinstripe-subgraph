@@ -1,12 +1,11 @@
 import {
-  MarketFactory,
   MarketCreated
 } from "../generated/MarketFactory/MarketFactory"
 import { Market } from "../generated/schema"
-import { generateIdFromEvent } from "./utils";
+import { getIdFromEvent } from "./entities/common";
 
 export function handleMarketCreated(event: MarketCreated): void {
-  let id = generateIdFromEvent(event);
+  let id = getIdFromEvent(event);
 
   let market = new Market(id);
   market.marketToken = event.params.marketToken.toHexString();

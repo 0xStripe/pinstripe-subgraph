@@ -1,4 +1,5 @@
 specVersion: 0.0.4
+description: Pinstripe Raw Subgraph
 schema:
   file: ./schema.graphql
 dataSources:
@@ -32,9 +33,8 @@ dataSources:
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CreateDeposit
-        - CancelDeposit
-        - ExecuteDeposit
+        - Deposit
+        - Transaction
       abis:
         - name: EventEmitter
           file: ./abis/EventEmitter.json

@@ -1,4 +1,4 @@
-import { EventLog1EventDataBytes32ItemsItemsStruct, EventLog1EventDataAddressItemsStruct, EventLog1EventDataAddressItemsItemsStruct, EventLog1EventDataUintItemsItemsStruct, EventLog1EventDataAddressItemsArrayItemsStruct, EventLog1EventDataBoolItemsItemsStruct } from "../../generated/EventEmitter/EventEmitter";
+import { EventLog1EventDataBytes32ItemsItemsStruct, EventLog1EventDataAddressItemsStruct, EventLog1EventDataAddressItemsItemsStruct, EventLog1EventDataUintItemsItemsStruct, EventLog1EventDataAddressItemsArrayItemsStruct, EventLog1EventDataBoolItemsItemsStruct, EventLogEventDataStruct } from "../../generated/EventEmitter/EventEmitter";
 import { Bytes, ethereum, Address, BigInt } from "@graphprotocol/graph-ts";
 export const ZERO_ADDRESS = Address.fromHexString("0x0000000000000000000000000000000000000000");
 

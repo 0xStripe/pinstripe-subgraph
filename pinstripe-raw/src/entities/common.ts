@@ -1,13 +1,13 @@
 import { ethereum } from "@graphprotocol/graph-ts";
-import { Transaction } from "../generated/schema";
+import { Transaction } from "../../generated/schema";
 
 // generate unique ID
-export function generateIdFromEvent(event: ethereum.Event): string {
+export function getIdFromEvent(event: ethereum.Event): string {
   return event.transaction.hash.toHexString() + ":" + event.logIndex.toString();
 }
 
-export function createTransactionIfNotExists(event: ethereum.Event): string {
-  let id = generateIdFromEvent(event);
+export function getOrCreateTransaction(event: ethereum.Event): Transaction {
+  let id = getIdFromEvent(event);
   let entity = Transaction.load(id);
 
   if (entity == null) {
@@ -26,5 +26,9 @@ export function createTransactionIfNotExists(event: ethereum.Event): string {
     entity.save();
   }
 
-  return id;
+  return entity as Transaction;
 }
+
+export const ORDER_STATUS_CREATED = "Created";
+export const ORDER_STATUS_CANCELLED = "Cancelled";
+export const ORDER_STATUS_EXECUTED = "Executed";

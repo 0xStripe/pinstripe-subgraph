@@ -4,9 +4,9 @@ import {
   MarketCreated
 } from "../../generated/MarketFactory/MarketFactory";
 import { ethereum, Address } from "@graphprotocol/graph-ts";
-import { generateIdFromEvent } from "../../src/utils";
 import { fakeEthereumAddress } from "./utils";
 import { Market } from "../../generated/schema";
+import { getIdFromEvent } from "../../src/entities/common";
 
 const MARKET_ENTITY_TYPE = "Market";
 
@@ -39,7 +39,7 @@ describe("handleMarketCreated", () => {
       let longToken = fakeEthereumAddress();
       let shortToken = fakeEthereumAddress();
       let event = newMarketCreatedEvent(marketToken, indexToken, longToken, shortToken);
-      let entityId = generateIdFromEvent(event);
+      let entityId = getIdFromEvent(event);
 
       handleMarketCreated(event);
 
