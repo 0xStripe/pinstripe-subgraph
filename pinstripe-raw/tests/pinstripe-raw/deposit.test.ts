@@ -209,7 +209,7 @@ describe("handleDeposit", () => {
 
       let deposit = Deposit.load(inputs.key.toHexString());
       assert.assertNotNull(deposit);
-      assert.addressEquals(Address.fromString(deposit!.from), inputs.account);
+      assert.addressEquals(Address.fromString(deposit!.account), inputs.account);
       assert.addressEquals(Address.fromString(deposit!.receiver), inputs.receiver);
       assert.addressEquals(Address.fromString(deposit!.callbackContract), inputs.callbackContract);
       assert.addressEquals(Address.fromString(deposit!.initialLongToken), inputs.initialLongToken);

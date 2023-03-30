@@ -38,7 +38,7 @@ type Deposit @entity {
   # Use create deposit request key as ID 
   id: ID!
 
-  from: String!
+  account: String!
   receiver: String!
   callbackContract: String!
   market: String!
@@ -74,7 +74,7 @@ type Withdrawal @entity {
   # request key
   id: ID!
 
-  from: String!
+  account: String!
   receiver: String!
   callbackContract: String!
   market: String!
@@ -83,7 +83,7 @@ type Withdrawal @entity {
   minShortTokenAmount: BigInt!
   updatedAtBlock: BigInt!
   executionFee: BigInt!
-  callbackGsaLimit: BigInt!
+  callbackGasLimit: BigInt!
   shouldUnwrapNativeToken: Boolean!
 
   status: OrderStatus!

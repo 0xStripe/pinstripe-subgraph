@@ -7,7 +7,7 @@ export function handleDepositCreated(eventData: EventData, transaction: Transact
 
   let deposit = new Deposit(key);
 
-  deposit.from = eventData.getAddressItemString("account")!;
+  deposit.account = eventData.getAddressItemString("account")!;
   deposit.receiver = eventData.getAddressItemString("receiver")!;
   deposit.callbackContract = eventData.getAddressItemString("callbackContract")!;
   deposit.market = eventData.getAddressItemString("market")!;

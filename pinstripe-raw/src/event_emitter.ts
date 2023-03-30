@@ -1,6 +1,7 @@
 import { EventLog, EventLog1, EventLog2, EventLogEventDataStruct } from "../generated/EventEmitter/EventEmitter";
 import { getIdFromEvent, getOrCreateTransaction } from "./entities/common";
 import { handleDepositCancelled, handleDepositCreated, handleDepositExecuted } from "./entities/deposit";
+import { handleWithdrawalCancelled, handleWithdrawalCreated, handleWithdrawalExecuted } from "./entities/withdrawal";
 import { EventData } from "./utils/event_data";
 
 const EVENT_DEPOSIT_CREATED = "DepositCreated";
@@ -26,6 +27,18 @@ export function handleEventLog(event: EventLog): void {
     return;
   }
 
+  if (eventName == EVENT_WITHDRAWAL_CANCELLED) {
+    let transaction = getOrCreateTransaction(event);
+    handleWithdrawalCancelled(eventData, transaction);
+    return;
+  }
+
+  if (eventName == EVENT_WITHDRAWAL_EXECUTED) {
+    let transaction = getOrCreateTransaction(event);
+    handleWithdrawalExecuted(eventData, transaction);
+    return;
+  }
+
 }
 
 export function handleEventLog1(event: EventLog1): void {
@@ -35,6 +48,12 @@ export function handleEventLog1(event: EventLog1): void {
   if (eventName == EVENT_DEPOSIT_CREATED) {
     let transaction = getOrCreateTransaction(event);
     handleDepositCreated(eventData, transaction);
+    return;
+  }
+
+  if (eventName == EVENT_WITHDRAWAL_CREATED) {
+    let transaction = getOrCreateTransaction(event);
+    handleWithdrawalCreated(eventData, transaction);
     return;
   }
 
