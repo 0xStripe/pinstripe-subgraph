@@ -8,8 +8,8 @@ dataSources:
     network: arbitrum-goerli
     source:
       abi: MarketFactory
-      address: "0x1DBbd042805F40c0Bb720e38681e59b9b7925Db1"
-      startBlock: 13055603
+      address: "0x0443c1bdCb65238048F9487ca7Cf525D8CAa1684"
+      startBlock: 14606427
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -28,8 +28,8 @@ dataSources:
     network: arbitrum-goerli
     source:
       abi: EventEmitter
-      address: "0x5E634F035779cd5BCfb79B8933650754d8A5ed06"
-      startBlock: 13055494
+      address: "0xe874F75Ae6A4b2D061Ab97b08208E3e432771B7B"
+      startBlock: 14606383
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6

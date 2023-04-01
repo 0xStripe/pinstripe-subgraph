@@ -1,228 +1,232 @@
 {
   "arbitrum-goerli": {
     "AdlHandler": {
-      "address": "0x73705c028c33130CC3992Bbb5098f1AF85636FAB",
-      "startBlock": 13055590
+      "address": "0x339F50Ed0f6F080CB05B1b3922E211925A855f6f",
+      "startBlock": 14606419
     },
     "AdlUtils": {
-      "address": "0xdb58431B773D3be9d9b3791e7Ef0f4a4C553Da69",
-      "startBlock": 13052640
+      "address": "0xDEa3B17a8aAAf0C0138cAC14f7E0b8aef20AA219",
+      "startBlock": 14569281
     },
     "BaseOrderUtils": {
-      "address": "0x666261832f997d5E4e806D84B51D0C3d445EBc11",
-      "startBlock": 13052349
+      "address": "0x4a81208E2Db204567E5176285317F2a2a6296c84",
+      "startBlock": 14569175
     },
     "Config": {
-      "address": "0xB1C329d0B6a67F0cf4F632DAc65CE2Be9d4594Aa",
-      "startBlock": 13057919
+      "address": "0xB2177f9065efBA0487f9De96f02E62533E9D75fd",
+      "startBlock": 14606439
     },
     "DataStore": {
-      "address": "0x64CfbE984FF192C224cCe6DB55d66F73e677E92e",
-      "startBlock": 13052655
+      "address": "0xC148908F95544a7F63AC8005cbf61E9900ea01ef",
+      "startBlock": 14569284
     },
     "DecreaseOrderUtils": {
-      "address": "0x52E33B5Be218081D474aac37102F2168b7Ce602A",
-      "startBlock": 13052598
+      "address": "0xeF0122bE9391ddC689479Db9949c3BF7d731cAAa",
+      "startBlock": 14569266
     },
     "DecreasePositionCollateralUtils": {
-      "address": "0xc9e183389233828A8ADb7B3af5A8EC3e9F5FbE06",
-      "startBlock": 13052568
+      "address": "0x2CBe57631275fA096456fb26FE9496e072585bC7",
+      "startBlock": 14569255
     },
     "DecreasePositionUtils": {
-      "address": "0x2f19f38277b87f9424CeBF1FEf0B3A2511BbC000",
-      "startBlock": 13052581
+      "address": "0x6EE206783ebd276Ac3655851a060Bbacf1B8Bd7F",
+      "startBlock": 14569262
     },
     "DepositEventUtils": {
-      "address": "0x3E51961C40695Ff5c08f933c021bc58E7fB23070",
-      "startBlock": 13057954
+      "address": "0xD4e3f6366221849CF433C0346e5Eb275aAd0aF30",
+      "startBlock": 14606462
     },
     "DepositHandler": {
-      "address": "0xC0663FFC9c2C72a1c1043952A332695209921De6",
-      "startBlock": 13058051
+      "address": "0x9f3775aC932B3cE6FBe42847788680AA16411F82",
+      "startBlock": 14606489
     },
     "DepositStoreUtils": {
-      "address": "0x1bCA141df1aDf2a84B27F9AC9Da2a9592c078138",
-      "startBlock": 13057988
+      "address": "0xa7e07Fde6B10B55dCAE463f6C73cD5F45e683D13",
+      "startBlock": 14606473
     },
     "DepositUtils": {
-      "address": "0x49a08dDae79ADec7a95CCE38ec072B0653871D54",
-      "startBlock": 13058005
+      "address": "0xD384f05CDda58f6BCc2401bd6518eD846Dd14a78",
+      "startBlock": 14606480
     },
     "DepositVault": {
-      "address": "0x6510a8E9e2DF1F53dc919b846c671b24c3572C13",
-      "startBlock": 13057972
+      "address": "0x24D9155f83BF330789973f7098D167915dD30509",
+      "startBlock": 14606466
     },
     "EventEmitter": {
-      "address": "0x5E634F035779cd5BCfb79B8933650754d8A5ed06",
-      "startBlock": 13055494
+      "address": "0xe874F75Ae6A4b2D061Ab97b08208E3e432771B7B",
+      "startBlock": 14606383
     },
     "ExchangeRouter": {
-      "address": "0xDf291A95e83942A6586B888e49897085A41B792b",
-      "startBlock": 13058213
+      "address": "0x240776591f5fFB0Df2E705cf557F1063a942bc64",
+      "startBlock": 14606557
     },
     "ExecuteDepositUtils": {
-      "address": "0xB11069613F78C1FB4c26B452e174782f006aa75A",
-      "startBlock": 13058032
+      "address": "0x3Fc923e9e632FE625458cDda36DF82c8DA472569",
+      "startBlock": 14606483
     },
     "FeeUtils": {
-      "address": "0xCD70eD1787Cf696Cda9A61CAB31AAe6131207397",
-      "startBlock": 13052407
+      "address": "0x98900F914769c727Daf9aE0aD38919c9CE58D1e7",
+      "startBlock": 14569191
     },
     "GasUtils": {
-      "address": "0xaD26dbbe979f90A0183D04B5F03E23d213e2D604",
-      "startBlock": 13052336
+      "address": "0xF37b8cF8506033AE8fA52AD924681CE38c9e6EF7",
+      "startBlock": 14569170
     },
     "IncreaseOrderUtils": {
-      "address": "0xec97888fA2d454e325544D116D1BA7991131b2F3",
-      "startBlock": 13052554
+      "address": "0xA091F40a95753F02359a64Ade84057E0fe489528",
+      "startBlock": 14569249
     },
     "IncreasePositionUtils": {
-      "address": "0x4e97015c0cD3Ac005bD9f5c5fC1DD9caCA2aD9bE",
-      "startBlock": 13052542
+      "address": "0x4992C21D73e6B301880d24b14aF840BbA49a9DBA",
+      "startBlock": 14569243
     },
     "LiquidationHandler": {
-      "address": "0x838e8383268438193F178b533AA3037610Cc02b9",
-      "startBlock": 13058287
+      "address": "0x58e5cE44C4AA0Ad631e7bEb6c0C6bf853A2A7e6b",
+      "startBlock": 14606575
     },
     "LiquidationUtils": {
-      "address": "0xeC6EdA2577fb121f08350e5c7217bD889975eFEc",
-      "startBlock": 13058256
+      "address": "0x8531F9CBB6c5b6BEB89bBB0F78AF6282CC0d0Cd0",
+      "startBlock": 14606571
     },
     "MarketEventUtils": {
-      "address": "0x6B7eeA1c4Fa6433898E09ec0236B2AC15e8684c4",
-      "startBlock": 13052421
+      "address": "0x01070Abb8672a58193a517063fD467CF27208EF4",
+      "startBlock": 14569196
     },
     "MarketFactory": {
-      "address": "0x1DBbd042805F40c0Bb720e38681e59b9b7925Db1",
-      "startBlock": 13055603
+      "address": "0x0443c1bdCb65238048F9487ca7Cf525D8CAa1684",
+      "startBlock": 14606427
     },
     "MarketStoreUtils": {
-      "address": "0x3BdB06f0675A41B6a24741A935Eb127A392506c1",
-      "startBlock": 13052367
+      "address": "0x1D40c5AdC94BCe5422756EC99bd03b47306923d6",
+      "startBlock": 14569178
     },
     "MarketUtils": {
-      "address": "0x261aAf7925493e54dDfcAD1909258ca081C9214a",
-      "startBlock": 13052472
+      "address": "0x007C9dB35eE9a6CEb492B4F51bA40E3d3a55C343",
+      "startBlock": 14569209
     },
     "Multicall3": {
-      "address": "0x05B0bce139E5F440dbF34d405E7AEC3C33Ec2d7A",
-      "startBlock": 13058323
+      "address": "0xa6c09BC7176780c5F14A83684F6886ee59FB21e1",
+      "startBlock": 14606584
     },
     "Oracle": {
-      "address": "0x9626902D450566EAa94973108EfadAC3DA67f7Dc",
-      "startBlock": 13055517
+      "address": "0x1B5E23c8A4fa533428e27AcCE7690949118837Ef",
+      "startBlock": 14606393
     },
     "OracleStore": {
-      "address": "0x40bd340dd32b1d958855c3f66145690876977866",
-      "startBlock": 13052928
+      "address": "0xe7C4c13d718930B4fB755a37Bf07cbB5516ea922",
+      "startBlock": 14606218
     },
     "OrderEventUtils": {
-      "address": "0xc6E133Eb6EB7289d7b0170228Ff99CbAB3E05293",
-      "startBlock": 13052391
+      "address": "0xda201e571EAc0eDB1954e46CFE6E8252923B047f",
+      "startBlock": 14569185
     },
     "OrderHandler": {
-      "address": "0x57B18c8D556B93DdfAbf915ccc98B232EC2f4a16",
-      "startBlock": 13058176
+      "address": "0x06617D5B159114B40b6d79093cf396F0F47F51b6",
+      "startBlock": 14606538
     },
     "OrderStoreUtils": {
-      "address": "0x3b1C743fAf72ac2729598Fffa41966c29379Fa7E",
-      "startBlock": 13052380
+      "address": "0x88E466807e313b40fB62454e429F0eD81f24c2E0",
+      "startBlock": 14569180
     },
     "OrderUtils": {
-      "address": "0xA828141D85Cd199aaE1d681FB8c46fa5602BAe2E",
-      "startBlock": 13052630
+      "address": "0xb229ED9F7415476f12A5aC9393D20679395f554a",
+      "startBlock": 14569274
     },
     "OrderVault": {
-      "address": "0xD61556eCD10067d22B26Ec718702691f030406FD",
-      "startBlock": 13055510
+      "address": "0x4A4cE9Ccff057b67a00a7f43C0FAA72B84197058",
+      "startBlock": 14606389
     },
     "PositionEventUtils": {
-      "address": "0x5868f8EA6F2ebFc6C65A8645750894D1196ED5bF",
-      "startBlock": 13052494
+      "address": "0x1d065B310f02744fF66426B005F09491402a370B",
+      "startBlock": 14569220
     },
     "PositionPricingUtils": {
-      "address": "0x61ec58c9870D5cB4586e13B041eF0076E6F0c1a9",
-      "startBlock": 13052525
+      "address": "0x8beF057Fb3E4AB925398981a89684D44A268c065",
+      "startBlock": 14569234
     },
     "PositionStoreUtils": {
-      "address": "0x4beB1E056adFbCfaF2696E2995E2197099e07aC3",
-      "startBlock": 13052456
+      "address": "0x0303d7289C54a83fe22693aE25220F6B1193996E",
+      "startBlock": 14569205
     },
     "PositionUtils": {
-      "address": "0xdeD3B5c8D1735204448e88644eEFC13294f6d7AA",
-      "startBlock": 13052482
+      "address": "0xEf18e3263EE536CFa37b0fD79a57cA73a58B927c",
+      "startBlock": 14569215
     },
     "Reader": {
-      "address": "0xD6F62068532D0DAFd7aA4ad721A187a64B07c838",
-      "startBlock": 13058356
+      "address": "0x06e3d5a037E3b14265D99f1Eea45202f8E9eE9A6",
+      "startBlock": 14606598
+    },
+    "ReaderUtils": {
+      "address": "0x31b9503CCFFe4576A01cCd6F1e0a4934E81F9cde",
+      "startBlock": 14606591
     },
     "ReferralEventUtils": {
-      "address": "0x771fD5D66881b53256872653053C66D8B6D54330",
-      "startBlock": 13052513
+      "address": "0x412618205e6F2D547701520D6661C8A1eeCa0817",
+      "startBlock": 14569254
     },
     "ReferralStorage": {
-      "address": "0x7043736A20FFb7fFE287ef0C83fb1056B497E12B",
-      "startBlock": 13055578
+      "address": "0x6E710184365c47b132a4a1128263Ff0601B13612",
+      "startBlock": 14606414
     },
     "RoleStore": {
-      "address": "0x1e79370e283f642048e816A08db48D2a976aF06E",
-      "startBlock": 13052266
+      "address": "0x4276d7831350E5d41a4a98124e736E8C0097dc13",
+      "startBlock": 14569102
     },
     "Router": {
-      "address": "0x6b1b5482781F48cD95Db8229C8b564372F31Cb75",
-      "startBlock": 13058082
+      "address": "0xCF3d3aD408d99a61e8223CA3501C7e16CBA84316",
+      "startBlock": 14606503
     },
     "SwapHandler": {
-      "address": "0xdd231B63cbd4d7c1Ef07CDbfce337669c918a2fC",
-      "startBlock": 13055553
+      "address": "0xab84357b2E540290D71748999fac3f4fF368e731",
+      "startBlock": 14606406
     },
     "SwapOrderUtils": {
-      "address": "0xEd17B29A65E7054A2e79dB1b187e8c616C7C4D43",
-      "startBlock": 13052616
+      "address": "0xc3a03934DD688650F4DD52Aa5AE4ac31aCCA510b",
+      "startBlock": 14569269
     },
     "SwapUtils": {
-      "address": "0x07536CdeDF9a743c040feC0fC7bA371085460844",
-      "startBlock": 13052438
+      "address": "0x2e6E18Aa96eC0258bF3B1b731Ead1bb28F4B1a9A",
+      "startBlock": 14569201
     },
     "Timelock": {
-      "address": "0x6aCCEE7F351e55D94d611854e36d2bD2F371C298",
-      "startBlock": 13058370
+      "address": "0xeD7bb5C043E01BFbd291D54E525BB5d5fAE1DDEF",
+      "startBlock": 14606600
     },
     "USDC": {
-      "address": "0xFa2c1b0293b44FAC6182C3F48165Adb10164E103",
-      "startBlock": 13055113
+      "address": "0xb05dbdF6CCB9d39EFb8075775A12F0C3108a5A4c",
+      "startBlock": 14606253
     },
     "USDT": {
-      "address": "0x54F0dc065bCC8447991e4Fcdaa298C85e219FDA8",
-      "startBlock": 13055133
+      "address": "0xBAd35ffff540B5d15338f514C055a74642Ac743b",
+      "startBlock": 14606262
     },
     "WBTC": {
-      "address": "0xeED75f0a21d83a1E83FEE872b6e42c189f148d8a",
-      "startBlock": 13055152
+      "address": "0xBFE861cEcc7Ec6f29b3AC6d589c50774a2B5B372",
+      "startBlock": 14606267
     },
     "WETH": {
-      "address": "0xA1E213C0B226F09Ccd82121c2623b14778ae4A63",
-      "startBlock": 13055101
+      "address": "0x084694927Cc7c31b8519cfdFA2718939706aCEA6",
+      "startBlock": 14606247
     },
     "WithdrawalEventUtils": {
-      "address": "0xC19b0f45AafA9759cDCea6b6a8e0C1bEC21d8500",
-      "startBlock": 13058122
+      "address": "0xFD8A416ca18fC707B054148CdF5574D1B30D576f",
+      "startBlock": 14606521
     },
     "WithdrawalHandler": {
-      "address": "0x39b4800f0FFbAf679dbD733ac06EF74F4dC61805",
-      "startBlock": 13058154
+      "address": "0x102b05508E5d8d272D14c28685fca81712E7D892",
+      "startBlock": 14606531
     },
     "WithdrawalStoreUtils": {
-      "address": "0xCC58ae0284Fc499D86cbc9F19e5e2012ac9d6B53",
-      "startBlock": 13058109
+      "address": "0xe4950C58FdF81C425645B1ac81985956967430E6",
+      "startBlock": 14606511
     },
     "WithdrawalUtils": {
-      "address": "0xf65c2f99029F30B46b3E878315C7B0919867fb7a",
-      "startBlock": 13058139
+      "address": "0x5F2aD4116F5b310d1E6cFbDfbD520f5BbAAC3E16",
+      "startBlock": 14606523
     },
     "WithdrawalVault": {
-      "address": "0xaBe6F0a617741B371c2bC41D89d693D4d0398BC5",
-      "startBlock": 13058094
+      "address": "0xB460C3d2f06dE98FF14fF79ba64384b647488e3F",
+      "startBlock": 14606507
     }
   },
   "fuji": {
